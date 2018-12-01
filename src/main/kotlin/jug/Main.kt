@@ -2,6 +2,8 @@ package jug
 
 import jug.kotlin.*
 import java.awt.Color.RED
+import java.time.Duration
+import java.util.*
 
 fun item2() = Car(
         name = "Lightning McQueen",
@@ -33,4 +35,22 @@ fun item43() {
     if (cars != null) {
         for (car in cars) println(car)
     }
+}
+
+fun stream(): List<Race> {
+    val races = sequenceOf(
+            Race("Strip \"The King\" Weathers", 20, Duration.ofSeconds(1234)),
+            Race("Chick Hicks", 20, Duration.ofSeconds(1234)),
+            Race("Lightning McQueen", 20, Duration.ofSeconds(1234)),
+            Race("\"Junior\" #8", 17, Duration.ofSeconds(789)),
+            Race("Mario Andretti #11", 20, Duration.ofSeconds(2345))
+    )
+
+    val winners = races
+            .filter { it.lap == 20 }
+            .groupByTo(TreeMap()) { it.time }
+            .firstEntry()
+            .value
+
+    return winners
 }
