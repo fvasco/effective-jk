@@ -37,13 +37,15 @@ fun item43() {
     }
 }
 
+fun lazy() = LightningMcQueenBestFans().list
+
 fun stream(): List<Race> {
     val races = sequenceOf(
             Race("Strip \"The King\" Weathers", 20, Duration.ofSeconds(1234)),
-            Race("Chick Hicks", 20, Duration.ofSeconds(1234)),
-            Race("Lightning McQueen", 20, Duration.ofSeconds(1234)),
             Race("\"Junior\" #8", 17, Duration.ofSeconds(789)),
-            Race("Mario Andretti #11", 20, Duration.ofSeconds(2345))
+            Race("Chick Hicks", 20, Duration.ofSeconds(1234)),
+            Race("Mario Andretti #11", 20, Duration.ofSeconds(2345)),
+            Race("Lightning McQueen", 20, Duration.ofSeconds(1234))
     )
 
     val winners = races

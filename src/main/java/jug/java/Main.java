@@ -6,12 +6,12 @@ import jug.java.item2.CarBuilder;
 import jug.java.item38.City;
 import jug.java.item43.Prison;
 import jug.java.item7.Mack;
+import jug.java.lazy.LightningMcQueenBestFans;
 import jug.java.stream.Race;
 
 import java.awt.*;
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.List;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -53,25 +53,24 @@ public final class Main {
         for (var car : cars) System.out.println(car);
     }
 
-    public static List<Race> stream() {
+    public static Object lazy() {
+        var lightningMcQueenBestFans = new LightningMcQueenBestFans();
+        return lightningMcQueenBestFans.getList();
+    }
+
+    public static Object stream() {
         var races = Stream.of(
                 new Race("Strip \"The King\" Weathers", 20, Duration.ofSeconds(1234)),
-                new Race("Chick Hicks", 20, Duration.ofSeconds(1234)),
-                new Race("Lightning McQueen", 20, Duration.ofSeconds(1234)),
                 new Race("\"Junior\" #8", 17, Duration.ofSeconds(789)),
-                new Race("Mario Andretti #11", 20, Duration.ofSeconds(2345))
+                new Race("Chick Hicks", 20, Duration.ofSeconds(1234)),
+                new Race("Mario Andretti #11", 20, Duration.ofSeconds(2345)),
+                new Race("Lightning McQueen", 20, Duration.ofSeconds(1234))
         );
 
-        var winners = races
+        return races
                 .filter(race -> race.getLap() == 20)
                 .collect(Collectors.groupingBy(Race::getTime, TreeMap::new, Collectors.toList()))
                 .firstEntry()
                 .getValue();
-
-        return winners;
-    }
-
-    public static void main(String... args) {
-        stream();
     }
 }
