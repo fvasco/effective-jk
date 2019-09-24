@@ -1,6 +1,6 @@
 package jug.kotlin
 
-class Runners(vararg cars: String) : List<String> by cars.toList() {
+class Runners(cars: List<String>) : List<String> by cars {
 
     override fun toString() =
             buildString {

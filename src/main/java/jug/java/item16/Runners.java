@@ -1,11 +1,11 @@
 package jug.java.item16;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Runners extends ListDelegate<String> {
 
-    public Runners(final String... cars) {
-        super(Arrays.asList(cars));
+    public Runners(final List<String> cars) {
+        super(cars);
     }
 
     @Override

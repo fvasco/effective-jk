@@ -10,12 +10,7 @@ fun item2() =
                 color = RED
         )
 
-fun item4() = listOf("Lightning McQueen", "Sally Carrera")
-
-
-fun item7() {
-    Mack.travelWith("Lightning McQueen")
-}
+fun item4() = startRace()
 
 fun item14() {
     val bestBumperOintmentCompany = BestBumperOintmentCompany()
@@ -23,7 +18,7 @@ fun item14() {
 }
 
 fun item16(): Any {
-    val runners = Runners("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen")
+    val runners = Runners(listOf("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"))
     return runners.toString()
 }
 

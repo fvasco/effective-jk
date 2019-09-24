@@ -4,14 +4,13 @@ import jug.java.item14.BestBumperOintmentCompany;
 import jug.java.item16.Runners;
 import jug.java.item2.CarBuilder;
 import jug.java.item38.City;
+import jug.java.item4.Util;
 import jug.java.item43.Prison;
-import jug.java.item7.Mack;
 import jug.java.lazy.LightningMcQueenBestFans;
 import jug.java.stream.Race;
 
 import java.awt.*;
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -25,12 +24,7 @@ public final class Main {
     }
 
     public static Object item4() {
-        var cars = Arrays.asList("Lightning McQueen", "Sally Carrera");
-        return cars;
-    }
-
-    public static void item7() {
-        Mack.INSTANCE.travelWith("Lightning McQueen");
+        Util.startRace();
     }
 
     public static void item14() {
@@ -39,7 +33,7 @@ public final class Main {
     }
 
     public static Object item16() {
-        var runners = new Runners("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen");
+        var runners = new Runners(List.of("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"));
         return runners.toString();
     }
 
