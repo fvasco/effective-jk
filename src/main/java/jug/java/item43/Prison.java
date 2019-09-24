@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class Prison {
-    private String carInthePrison;
+    private String carInThePrison;
 
     public List<String> getCars() {
-        if (carInthePrison == null) return Collections.emptyList();
-        else return Collections.singletonList(carInthePrison);
+        if (carInThePrison == null) return Collections.emptyList();
+        else return Collections.singletonList(carInThePrison);
     }
 }

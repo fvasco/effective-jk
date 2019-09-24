@@ -3,12 +3,12 @@ package jug
 import jug.kotlin.*
 import java.awt.Color.RED
 import java.time.Duration
-import java.util.*
 
-fun item2() = Car(
-        name = "Lightning McQueen",
-        color = RED
-)
+fun item2() =
+        Car(
+                name = "Lightning McQueen",
+                color = RED
+        )
 
 fun item4() = listOf("Lightning McQueen", "Sally Carrera")
 
@@ -32,9 +32,7 @@ fun item38() = City("Radiator Springs")
 fun item43() {
     val prison = Prison()
     val cars = prison.cars
-    if (cars != null) {
-        for (car in cars) println(car)
-    }
+    cars.forEach(::println)
 }
 
 fun lazy() = LightningMcQueenBestFans().list
@@ -50,9 +48,9 @@ fun stream(): List<Race> {
 
     val winners = races
             .filter { it.lap == 20 }
-            .groupByTo(TreeMap()) { it.time }
-            .firstEntry()
-            .value
+            .groupBy { it.time }
+            .minBy { (time) -> time }
+            ?.value.orEmpty()
 
     return winners
 }
