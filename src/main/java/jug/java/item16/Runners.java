@@ -12,7 +12,7 @@ public class Runners extends ListDelegate<String> {
     public String toString() {
         var sb = new StringBuilder();
         sb.append("Runners:\n");
-        for (var car : this) sb.append(" - ").append(car).append("\n");
+        for (var car : this) sb.append(" - " + car + "\n");
         return sb.toString();
     }
 }
