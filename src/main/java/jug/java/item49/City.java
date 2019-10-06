@@ -1,4 +1,4 @@
-package jug.java.item38;
+package jug.java.item49;
 
 public class City {
     private final String name;

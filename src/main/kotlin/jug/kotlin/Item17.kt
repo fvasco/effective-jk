@@ -1,24 +1,13 @@
 package jug.kotlin
 
-open class Vise {
+import java.awt.Color
 
-    var locked: Boolean = false
-        private set
+data class Ramon(
+        val working: Boolean,
+        val position: Position,
+        val color: Color
+)
 
-    open fun lock() {
-        locked = true
-    }
-
-    fun unlock() {
-        locked = false
-    }
-}
-
-class Clamp : Vise() {
-
-    override fun lock() {
-        println("Clamp on wheel")
-        super.lock()
-    }
-
+enum class Position {
+    UP, DOWN
 }

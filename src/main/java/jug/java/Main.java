@@ -1,16 +1,21 @@
 package jug.java;
 
-import jug.java.item14.BestBumperOintmentCompany;
-import jug.java.item16.Runners;
+import jug.java.item16.BestBumperOintmentCompany;
+import jug.java.item17.Ramon;
+import jug.java.item18.Runners;
 import jug.java.item2.CarBuilder;
-import jug.java.item38.City;
+import jug.java.item26.DemolitionDerby;
 import jug.java.item4.Util;
-import jug.java.item43.Prison;
-import jug.java.lazy.LightningMcQueenBestFans;
+import jug.java.item49.City;
+import jug.java.item54.Prison;
+import jug.java.item83.LightningMcQueenBestFans;
 import jug.java.stream.Race;
+import jug.kotlin.Position;
+import jug.kotlin.Runner;
 
 import java.awt.*;
 import java.time.Duration;
+import java.util.List;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -23,7 +28,7 @@ public final class Main {
                 .build();
     }
 
-    public static Object item4() {
+    public static void item4() {
         Util.startRace();
     }
 
@@ -35,6 +40,20 @@ public final class Main {
     public static Object item16() {
         var runners = new Runners(List.of("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"));
         return runners.toString();
+    }
+
+    public static void item17() {
+        final var ramon = new Ramon(false, Position.DOWN, Color.RED);
+        final var ramonUp = ramon.withPosition(Position.UP);
+    }
+
+    public static void item26() {
+        var demolitionDerby = new DemolitionDerby();
+
+        var winner = demolitionDerby
+                .findWinner()
+                .map(Runner::getName)
+                .orElse("No winner");
     }
 
     public static Object item38() {

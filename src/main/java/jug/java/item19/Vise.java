@@ -1,4 +1,4 @@
-package jug.java.item17;
+package jug.java.item19;
 
 public class Vise {
 
@@ -12,11 +12,11 @@ public class Vise {
         this.locked = locked;
     }
 
-    public void lock() {
+    public final void lock() {
         setLocked(true);
     }
 
-    public final void unlock() {
+    public void unlock() {
         setLocked(false);
     }
 }

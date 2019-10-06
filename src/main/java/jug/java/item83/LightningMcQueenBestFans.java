@@ -1,26 +1,24 @@
-package jug.java.lazy;
+package jug.java.item83;
 
 import jug.kotlin.MazdaMX5;
 
-import java.lang.invoke.VarHandle;
 import java.util.List;
 
 public class LightningMcQueenBestFans {
 
-    private Object list = new Object();
+    private volatile List<MazdaMX5> list;
 
     public List<MazdaMX5> getList() {
         var res = list;
-        if (!(res instanceof List)) {
-            synchronized (res) {
+        if (res == null) {
+            synchronized (this) {
                 res = list;
-                if (!(res instanceof List)) {
+                if (res == null) {
                     res = List.of(new MazdaMX5("Mia"), new MazdaMX5(("Tia")));
-                    VarHandle.releaseFence();
                     list = res;
                 }
             }
         }
-        return (List<MazdaMX5>) res;
+        return res;
     }
 }

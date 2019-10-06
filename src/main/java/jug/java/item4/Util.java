@@ -1,6 +1,6 @@
 package jug.java.item4;
 
-public class Util {
+public final class Util {
 
     private Util() {
     }

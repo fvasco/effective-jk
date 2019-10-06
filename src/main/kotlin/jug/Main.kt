@@ -1,6 +1,7 @@
 package jug
 
 import jug.kotlin.*
+import java.awt.Color
 import java.awt.Color.RED
 import java.time.Duration
 
@@ -20,6 +21,17 @@ fun item14() {
 fun item16(): Any {
     val runners = Runners(listOf("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"))
     return runners.toString()
+}
+
+fun item17() {
+    val ramon = Ramon(working = false, position = Position.DOWN, color = Color.RED)
+    val ramonUp = ramon.copy(position = Position.UP)
+}
+
+fun item26() {
+
+    val winner = DemolitionDerby.findWinner()?.name ?: "No winner"
+
 }
 
 fun item38() = City("Radiator Springs")
