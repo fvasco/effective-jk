@@ -1,11 +1,13 @@
 package jug.kotlin
 
-fun engage(target: String, weaponSupplier: () -> Weapon) {
-    val weapon = weaponSupplier()
-    println("$target engaged using $weapon")
-    weapon.fire()
+class M134 {
+
+    fun fire(ammunitionBelt: () -> Cartridge) {
+        repeat(100) {
+            val cartridge = ammunitionBelt()
+            println("$cartridge fired")
+        }
+    }
 }
 
-interface Weapon {
-    fun fire()
-}
+class Cartridge

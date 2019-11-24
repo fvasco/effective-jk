@@ -2,7 +2,7 @@ package jug.kotlin
 
 import java.awt.Color
 
-data class Car(
+class Car(
         val name: String,
         val color: Color = Color.BLACK,
         val wheels: Int = 4

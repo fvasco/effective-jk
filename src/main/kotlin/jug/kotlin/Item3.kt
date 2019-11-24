@@ -1,3 +1,8 @@
 package jug.kotlin
 
-object StanleyStatue
+object StanleyStatue {
+
+    fun fly() {
+    }
+
+}

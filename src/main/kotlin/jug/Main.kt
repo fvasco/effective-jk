@@ -11,21 +11,23 @@ fun item2() =
                 color = RED
         )
 
+fun item3() = StanleyStatue.fly()
+
 fun item4() = startRace()
 
-fun item14() {
+fun item16() {
     val bestBumperOintmentCompany = BestBumperOintmentCompany()
     bestBumperOintmentCompany.name = "Rust-Eze"
-}
-
-fun item16(): Any {
-    val runners = Runners(listOf("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"))
-    return runners.toString()
 }
 
 fun item17() {
     val ramon = Ramon(working = false, position = Position.DOWN, color = Color.RED)
     val ramonUp = ramon.copy(position = Position.UP)
+}
+
+fun item18() {
+    val runners = Runners(listOf("Strip \"The King\" Weathers", "Chick Hicks", "Lightning McQueen"))
+    println(runners)
 }
 
 fun item26() {

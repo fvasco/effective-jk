@@ -7,4 +7,7 @@ public final class StanleyStatue2 {
 
     private StanleyStatue2() {
     }
+
+    public void fly() {
+    }
 }
