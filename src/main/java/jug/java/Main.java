@@ -40,6 +40,8 @@ public final class Main {
     public static void item14() {
         var bestBumperOintmentCompany = new BestBumperOintmentCompany();
         bestBumperOintmentCompany.setName("Rust-Eze");
+        bestBumperOintmentCompany.setWebsite("https://rust-eze.com/");
+        System.out.println(bestBumperOintmentCompany.getLink());
     }
 
     public static Object item16() {

@@ -18,6 +18,8 @@ fun item4() = startRace()
 fun item16() {
     val bestBumperOintmentCompany = BestBumperOintmentCompany()
     bestBumperOintmentCompany.name = "Rust-Eze"
+    bestBumperOintmentCompany.website = "https://rust-eze.com/"
+    println(bestBumperOintmentCompany.link)
 }
 
 fun item17() {
